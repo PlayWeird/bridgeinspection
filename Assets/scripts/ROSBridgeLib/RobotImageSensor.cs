@@ -21,10 +21,10 @@ public class RobotImageSensor : ROSBridgeSubscriber {
 	
 	public new static string GetMessageTopic() {
 
-        return "/iRobot/camera/image_raw/compressed";
+        //return "/iRobot/camera/image_raw/compressed";
         
         //for bag file
-        //return "/camera/compressed";
+        return "/camera/compressed";
 
         
     }  

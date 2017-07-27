@@ -41,14 +41,10 @@ public class GameManager : MonoBehaviour {
 
     public void Quit()
     {
-
         #if UNITY_EDITOR
         EditorApplication.isPlaying = false; // in editor turn off play mode
         #else
         Application.Quit();// if an application then quit
         #endif
-
     }
-
-
 }
