@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour {
 
     private UIManager uiManager;
     //private ConfigManager configManager;
-    //private ROSManager rosManager;
+    private ROSManager rosManager;
 
     public static GameManager getInstance()
     {
@@ -41,10 +41,14 @@ public class GameManager : MonoBehaviour {
 
     public void Quit()
     {
+
         #if UNITY_EDITOR
         EditorApplication.isPlaying = false; // in editor turn off play mode
         #else
         Application.Quit();// if an application then quit
         #endif
+
     }
+
+
 }
