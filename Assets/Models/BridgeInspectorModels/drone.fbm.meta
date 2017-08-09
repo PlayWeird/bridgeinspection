@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/models/drone.fbm.meta
+guid: cb03e07abebf8b84e8145b97de6f149d
+folderAsset: yes
+timeCreated: 1500661703
+=======
+guid: e7ef9cbbd87cc9b4b937b21a01c5fccf
+folderAsset: yes
+timeCreated: 1498781073
+>>>>>>> d84dba77ee1f1a3b09ba5decfd2e16b04f2bb67e:Assets/Models/BridgeInspectorModels/drone.fbm.meta
+licenseType: Free
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

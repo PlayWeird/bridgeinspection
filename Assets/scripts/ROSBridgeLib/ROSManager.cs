@@ -10,10 +10,18 @@ public class ROSManager{
 
     private Texture2D UBDCam;
 
+    private float Longitude;
+    private float Latitude;
+    private float Altitude;
+
     private ROSBridgeWebSocketConnection ros = null;
     private Boolean lineOn = false;
 
+<<<<<<< HEAD
     private string ip;
+=======
+    private string ip = "134.197.86.203";
+>>>>>>> d84dba77ee1f1a3b09ba5decfd2e16b04f2bb67e
 
     public static ROSManager getInstance(){
 		return instance;
@@ -21,8 +29,13 @@ public class ROSManager{
 
 	private ROSManager(){
         UBDCam = new Texture2D(128, 128);
+<<<<<<< HEAD
                 
         //ROSConnect();
+=======
+        
+        ROSConnect();
+>>>>>>> d84dba77ee1f1a3b09ba5decfd2e16b04f2bb67e
         
     }
 
@@ -31,8 +44,9 @@ public class ROSManager{
         ros = new ROSBridgeWebSocketConnection("ws://"+ip, 9090);
         Debug.Log("ROSBridge connecting to " + ip);
         ros.AddSubscriber(typeof(RobotImageSensor));
-        ros.AddSubscriber(typeof(DroneImageSensor));
-        ros.AddPublisher(typeof(RobotTeleop));
+        ros.AddSubscriber(typeof(GPSMessage));
+        //ros.AddSubscriber(typeof(DroneImageSensor));
+        //ros.AddPublisher(typeof(RobotTeleop));
         ros.Connect();
         lineOn = true;
     }
@@ -41,7 +55,11 @@ public class ROSManager{
     {
         if (lineOn)
         { 
+<<<<<<< HEAD
         this.ros.Render();
+=======
+            this.ros.Render();
+>>>>>>> d84dba77ee1f1a3b09ba5decfd2e16b04f2bb67e
         }
     }
     public void RemoteControl(Vector3 linear, Vector3 angular) {
@@ -63,6 +81,7 @@ public class ROSManager{
             return UBDCam;       
     }
 
+<<<<<<< HEAD
     public void setIp(string newip)
     {
         ip = newip;
@@ -70,6 +89,37 @@ public class ROSManager{
 
     public string getIp()
     {
+=======
+    public float getLatitude() {
+        return Latitude;
+    }
+
+    public void setLatitude(float latitude) {
+        Latitude = latitude;
+    }
+
+    public float getLongitude() {
+        return Longitude;
+    }
+
+    public void setLongitude(float longitude) {
+        Longitude = longitude;
+    }
+
+    public float getAltitude() {
+        return Altitude;
+    }
+
+    public void setAltitude(float altitude) {
+        Altitude = altitude;
+    }
+
+    public void setIp(string newip) {
+        ip = newip;
+    }
+
+    public string getIp() {
+>>>>>>> d84dba77ee1f1a3b09ba5decfd2e16b04f2bb67e
         return ip;
     }
     

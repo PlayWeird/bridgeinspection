@@ -22,7 +22,11 @@ public class RobotImageSensor : ROSBridgeSubscriber {
 	public new static string GetMessageTopic() {
         // return "/iRobot/camera/image_raw/compressed";
         return "/camera/compressed";
+<<<<<<< HEAD
 	}  
+=======
+    }  
+>>>>>>> d84dba77ee1f1a3b09ba5decfd2e16b04f2bb67e
 	
 	public new static string GetMessageType() {
 		return "sensor_msgs/CompressedImage";
